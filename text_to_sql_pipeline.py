@@ -44,8 +44,8 @@ class Pipeline:
                 "DB_USER": os.environ["PG_USER"],                   # User to connect to the database with
                 "DB_PASSWORD": os.environ["PG_PASSWORD"],           # Password to connect to the database with
                 "DB_DATABASE": os.environ["PG_DB"],                 # Database to select on the DB instance
-                "DB_TABLES": [os.environ["PG_TABLES"]],                            # Table(s) to run queries against 
-                "OLLAMA_HOST": os.environ["OLLAMA_HOST"], # Make sure to update with the URL of your Ollama host, such as http://localhost:11434 or remote server address
+                "DB_TABLES": ["albums"],                            # Table(s) to run queries against 
+                "OLLAMA_HOST": "http://host.docker.internal:11434", # Make sure to update with the URL of your Ollama host, such as http://localhost:11434 or remote server address
                 "TEXT_TO_SQL_MODEL": "phi3:latest"                  # Model to use for text-to-SQL generation      
             }
         )
